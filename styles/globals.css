@@ -1,16 +1,27 @@
+:root {
+  --color-bg: #313131;
+  --color-text: #d4dde6;
+  --color-theme: #478183;
+  --color-red: #df3b3b;
+  --color-green: #3bdf72;
+  --color-gray: #b5bdc4;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
+  background-color: var(--color-bg);
+  color: var(--color-text)
 }
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  color: var(--color-theme);
+  text-decoration: none;
 }
