@@ -25,3 +25,12 @@ a {
   color: var(--color-theme);
   text-decoration: none;
 }
+
+header {
+  background-color: var(--color-theme);
+  height: 5rem;
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
