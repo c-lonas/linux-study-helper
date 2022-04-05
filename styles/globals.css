@@ -2,7 +2,9 @@
   --color-bg: #313131;
   --color-text: #d4dde6;
   --color-theme: #478183;
+  --color-legend: #e8985c;
   --color-red: #df3b3b;
+  --color-pink: #83476f;
   --color-green: #3bdf72;
   --color-gray: #b5bdc4;
 }
@@ -41,6 +43,12 @@ a {
     
   }
 
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+  }
+
   .header-nav-list {
     width: 100%;
     list-style-type: none;
@@ -75,6 +83,7 @@ a {
     color: var(--color-theme);
     text-align: center;
   }
+
 
 }
 
