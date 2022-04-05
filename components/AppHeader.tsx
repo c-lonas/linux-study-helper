@@ -2,20 +2,26 @@ import React, { FunctionComponent } from 'react';
 
 import { motion } from "framer-motion";
 
-const list: { [key: string]: {} } = {
+
+
+const list = {
     hidden: { opacity: 0 },
     visible: { 
         opacity: 1,
         transition: {
-            staggerChildren: .5
+            delayChildren: 1,
+            staggerChildren: .35,
+            type: 'spring', 
         }
     }
 }
 
-const item: { [key: string]: {} } = {
-    hidden: { opacity: 0, y: 15 },
-    visible: { opacity: 1, y: 0 },
-    // hover: {scale: 1.2}
+const item = {
+    hidden: { opacity: 0, y: 20},
+    visible: { 
+        y: 0,
+        opacity: 1, 
+    }
 }
 
 
@@ -25,16 +31,12 @@ const AppHeader: React.FC = () => {
             <motion.ul className='header-nav-list'
                 variants={list}
                 initial="hidden"
-                animate="visible"
+                animate="visible"       
             >
-                <motion.li variants={item}> Home </motion.li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <motion.li variants={item} > Settings </motion.li>
-                <motion.li variants={item} > Info </motion.li>
-                <motion.li variants={item} > login </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Home </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Settings </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Info </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > login </motion.li>
             </motion.ul>
         </header>
     )
