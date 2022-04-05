@@ -23,8 +23,8 @@ const FlashCards: React.FC = () => {
                 <p>Here is the text for the first question. It's a really good question</p>
             </div>
             <div className='flash-card-controls'>
-                <button>Button 1</button>
-                <button>Button 2</button>
+                <button>Flip Card</button>
+                <button>New Card</button>
             </div>
 
 
