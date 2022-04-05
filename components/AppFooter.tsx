@@ -1,8 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
 import { motion } from "framer-motion";
-import { normalize } from 'path';
-
 
 const footer = {
     hidden: { opacity: 0, x: -250, fontStyle: "italic"},

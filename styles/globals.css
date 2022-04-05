@@ -1,6 +1,7 @@
 :root {
   --color-bg: #313131;
   --color-text: #d4dde6;
+  --color-card-text: #313131;
   --color-theme: #478183;
   --color-legend: #e8985c;
   --color-red: #df3b3b;
@@ -82,6 +83,44 @@ a {
     font-weight: bold;
     color: var(--color-theme);
     text-align: center;
+  }
+  
+  .flash-card-container {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flash-card-controls {
+  }
+
+  .flash-card-controls button {
+    margin: 1rem .5rem;
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .flash-card {
+    width: 300px;
+    height: 200px;
+    border-style: solid;
+    border-color: #313131;
+    box-shadow: 10px 10px 10px black;
+    background-color: var(--color-gray);
+    color: var(--color-card-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .flash-card p {
+    text-align: center;
+    font-size: 16px;
   }
 
 
