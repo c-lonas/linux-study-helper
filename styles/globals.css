@@ -7,30 +7,129 @@
   --color-gray: #b5bdc4;
 }
 
-html,
-body {
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text)
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 a {
   color: var(--color-theme);
   text-decoration: none;
 }
 
-header {
-  background-color: var(--color-theme);
-  height: 5rem;
-  margin-top: 0;
-  display: flex;
-  justify-content: space-between;
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    background-color: var(--color-theme);
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10px;
+    
+  }
+
+  .header-nav-list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .option-cntr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-card {
+    width: 65%;
+    height: 8rem;
+    background-color: var(--color-gray);
+    margin: 1rem;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-theme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .option-card-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: var(--color-theme);
+    text-align: center;
+  }
+
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header {
+    background-color: var(--color-theme);
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 15px;
+    
+  }
+
+  .header-nav-list {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  .option-cntr {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-card {
+    width: 45%;
+    height: 5rem;
+    background-color: var(--color-gray);
+    margin: 1rem;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-theme);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .option-card-text {
+    font-size: 58px;
+    font-weight: bold;
+    color: var(--color-theme);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

@@ -1,18 +1,41 @@
-import React, { FunctionComponent } from 'react'
+import React, { FunctionComponent } from 'react';
 
+import { motion } from "framer-motion";
 
-type headerProps = {
-    title?: string
-    message?: string
-    login?: string
+const list: { [key: string]: {} } = {
+    hidden: { opacity: 0 },
+    visible: { 
+        opacity: 1,
+        transition: {
+            staggerChildren: .5
+        }
+    }
 }
 
-const AppHeader: React.FC<headerProps> = ({title, message, login}) => {
+const item: { [key: string]: {} } = {
+    hidden: { opacity: 0, y: 15 },
+    visible: { opacity: 1, y: 0 },
+    // hover: {scale: 1.2}
+}
+
+
+const AppHeader: React.FC = () => {
     return (
         <header>
-            <h2>chaselonas.dev</h2>
-            <h2>Welcome to my header element</h2>
-            <h2>login stuff</h2>
+            <motion.ul className='header-nav-list'
+                variants={list}
+                initial="hidden"
+                animate="visible"
+            >
+                <motion.li variants={item}> Home </motion.li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <motion.li variants={item} > Settings </motion.li>
+                <motion.li variants={item} > Info </motion.li>
+                <motion.li variants={item} > login </motion.li>
+            </motion.ul>
         </header>
     )
 }

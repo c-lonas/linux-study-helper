@@ -10,20 +10,26 @@ const Home: NextPage = () => {
       <Head>
         <title>Let's Learn Linux!</title>
         <meta name="description" content="" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
-      <AppHeader/>  
-
+      <AppHeader />  
       <main className={styles.main}>
         
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        <div className='option-cntr'>
+          <div className='option-card option-card-1'>
+            <p className='option-card-text'>Begin</p>
+          </div>
+          {/* <div className='option-card option-card-2'>
+            <p className='option-card-text'>Quiz Mode</p>
+          </div> */}
+
+        </div>
+
+
       </main>
     </div>
   )
