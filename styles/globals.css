@@ -94,6 +94,8 @@ a {
   }
 
   .flash-card-controls {
+    display: flex;
+    align-items: center;
   }
 
   .flash-card-controls button {

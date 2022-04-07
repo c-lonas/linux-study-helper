@@ -5,11 +5,16 @@ import type { AppProps } from 'next/app'
 
 
 
-function MyApp({ Component, pageProps }: AppProps) {
- 
+function MyApp({ Component, pageProps }: AppProps) { 
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Component {...pageProps} />
+    </>
+  )
 }
+
+
 
 
 export default MyApp

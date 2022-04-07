@@ -1,13 +1,10 @@
 import React from 'react'
-import Flashcard from './FlashCard'
 
 
-export default function Flashcardlist( { flashcards } ) {
+
+export default function FlashcardList() {
     return (
         <div>
-            {flashcards.map(flashcard => {
-                return <Flashcard flashcard={flashcard} key={flashcard.id} />
-            })}
         </div>
     )
 }

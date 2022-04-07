@@ -2,8 +2,6 @@ import React, { FunctionComponent, useState } from 'react';
 
 import { motion, useAnimation } from "framer-motion";
 
-import Flashcardlist from './Flashcardlist';
-
 
 
 const card = {
@@ -11,7 +9,6 @@ const card = {
     visible: { 
         opacity: 1,
         y: 0,
-    
         transition: {
             type: 'spring', 
         }
@@ -22,7 +19,6 @@ const card = {
 
 const FlashCard: React.FC = () => {
 
-    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
     const controls = useAnimation()
 
     function handleClickFlip(e: any){
@@ -59,7 +55,9 @@ const FlashCard: React.FC = () => {
                 animate={controls}
             >
                 <h3>Question #</h3>
-                <Flashcardlist flashcards={flashcards} />
+                <p>{SAMPLE_FLASHCARDS[0].question}</p>
+                <p>{SAMPLE_FLASHCARDS[0].options[0]}</p>
+
             </motion.div>
 
             <div className='flash-card-controls'>
@@ -74,9 +72,16 @@ const FlashCard: React.FC = () => {
     
 }
 
-const SAMPLE_FLASHCARDS: {} = [
 
-  {
+
+interface SAMPLE_FLASHCARD_TYPE {
+        id: number;
+        question: string;
+        answer: string;
+        options: [string, string, string, string]
+}
+
+const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
     id: 1,
     question: "this is the first question text",
     answer: "this is the answer to the first question",
@@ -87,10 +92,9 @@ const SAMPLE_FLASHCARDS: {} = [
       'option d',
 
     ]
+}
 
-  },
-
-  {
+const FLASHCARD_TWO: SAMPLE_FLASHCARD_TYPE = {
     id: 2,
     question: "this is the second question text",
     answer: "this is the answer to the second question",
@@ -102,10 +106,11 @@ const SAMPLE_FLASHCARDS: {} = [
 
     ]
 
-  },
+}
 
-]
+const SAMPLE_FLASHCARDS: SAMPLE_FLASHCARD_TYPE[] = []
 
+SAMPLE_FLASHCARDS.push(FLASHCARD_ONE, FLASHCARD_TWO)
 
 
 
