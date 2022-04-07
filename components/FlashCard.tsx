@@ -1,6 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 
 import { motion, useAnimation } from "framer-motion";
+
+import Flashcardlist from './Flashcardlist';
+
+
 
 const card = {
     hidden: { opacity: 0, y: 100},
@@ -16,7 +20,9 @@ const card = {
 
 
 
-const FlashCards: React.FC = () => {
+const FlashCard: React.FC = () => {
+
+    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS);
     const controls = useAnimation()
 
     function handleClickFlip(e: any){
@@ -53,12 +59,13 @@ const FlashCards: React.FC = () => {
                 animate={controls}
             >
                 <h3>Question #</h3>
-                <p>Here is the text for the first question. It's a really good question</p>
+                <Flashcardlist flashcards={flashcards} />
             </motion.div>
 
             <div className='flash-card-controls'>
+                <button > Reveal Multiple Choice </button>
                 <button onClick={handleClickFlip} > Flip Card </button>
-                <button onClick={handleClickNew} >New Card </button>
+                <button onClick={handleClickNew} > New Card </button>
             </div>
 
 
@@ -67,4 +74,39 @@ const FlashCards: React.FC = () => {
     
 }
 
-export default FlashCards
+const SAMPLE_FLASHCARDS: {} = [
+
+  {
+    id: 1,
+    question: "this is the first question text",
+    answer: "this is the answer to the first question",
+    options: [
+      'option a',
+      'option b',
+      'option c',
+      'option d',
+
+    ]
+
+  },
+
+  {
+    id: 2,
+    question: "this is the second question text",
+    answer: "this is the answer to the second question",
+    options: [
+      'option 1',
+      'option 2',
+      'option 3',
+      'option 4',
+
+    ]
+
+  },
+
+]
+
+
+
+
+export default FlashCard

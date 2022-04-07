@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 
 import AppHeader from '../components/AppHeader'
 import AppFooter from '../components/AppFooter'
-import FlashCards from '../components/FlashCards'
+import FlashCard from '../components/FlashCard'
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Let's Learn <a href="" target="_blank"> Linux! </a>
         </h1>
-        <FlashCards />
+        <FlashCard />
 
         {/* <div className='option-cntr'>
           <div className='option-card option-card-1'>
