@@ -33,8 +33,11 @@ const FlashCard: React.FC = () => {
                 rotate: 360,
                 scale: [1, 1.2, 1.3, 1.4, 1.5, 1.51, 1.5, .9, 1],
                 borderRadius: ["0%", "3%", "0%"],
-                transition: { type: 'spring', stiffness: 35},
-
+                transition: { type: 'spring', stiffness: 35, },
+                transitionEnd: {
+                    rotateX: 0,
+                    rotate: 0
+                }
             });
             
     } 
