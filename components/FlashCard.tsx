@@ -21,18 +21,22 @@ const FlashCard: React.FC = () => {
 
     const controls = useAnimation()
 
+    // Flashcard Flip-State Handler
+    const [flip , setFlip] = useState<boolean>(false)
+
+    // Flashcard Animation Handlers
     function handleClickFlip(e: any){
-            e.preventDefault();
+            // e.preventDefault();
+            setFlip(!flip);
             controls.start({
                 rotateX: 360,
-                rotate: 180,
+                rotate: 360,
                 scale: [1, 1.2, 1.3, 1.4, 1.5, 1.51, 1.5, .9, 1],
                 borderRadius: ["0%", "3%", "0%"],
-                boxShadow: "-10px -10px 10px black",
-                color: "var(--color-gray)",
-                transition: { type: 'spring', stiffness: 75},
+                transition: { type: 'spring', stiffness: 35},
 
             });
+            
     } 
 
     function handleClickNew(e: any){
@@ -48,6 +52,8 @@ const FlashCard: React.FC = () => {
             });
     } 
 
+    
+
     return (
         <div className='flash-card-container'>
             <motion.div className="flash-card"
@@ -55,8 +61,11 @@ const FlashCard: React.FC = () => {
                 animate={controls}
             >
                 <h3>Question #</h3>
-                <p>{SAMPLE_FLASHCARDS[0].question}</p>
-                <p>{SAMPLE_FLASHCARDS[0].options[0]}</p>
+                {flip ? 
+                    <p>{SAMPLE_FLASHCARDS[0].answer}</p> : <p>{SAMPLE_FLASHCARDS[0].question} </p>
+
+                }
+               
 
             </motion.div>
 
