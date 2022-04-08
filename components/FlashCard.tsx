@@ -24,6 +24,11 @@ const FlashCard: React.FC = () => {
     // Flashcard Flip-State Handler
     const [flip , setFlip] = useState<boolean>(false)
 
+    const [flashcardID, setFlashcardID] = useState<number>(0)
+
+    const totalCards = SAMPLE_FLASHCARDS.length
+
+
     // Flashcard Animation Handlers
     function handleClickFlip(e: any){
             // e.preventDefault();
@@ -44,17 +49,24 @@ const FlashCard: React.FC = () => {
 
     function handleClickNew(e: any){
             // e.preventDefault();
+           
             controls.start({
-                rotate: 720,
-                scale: .001,
-                y: -200,
-                x: 200,
+                rotate: [0, 720, 0],
+                scale: [1, .001, 1],
+                y: [0, -200, 0],
+                x: [0, 200, 0],
                 boxShadow: "5px 5px 5px var(--color-theme)",
                 transition: { type: 'spring', stiffness: 50},
-                transitionEnd: { display: "none" }
+                transitionEnd: { y: 0, x: 0, rotate: 0, scale: 1}
             });
+            setFlashcardID( Math.floor(Math.random() * totalCards) );
+
+            
+
     } 
 
+    
+    // flashcardID = ();
     
 
     return (
@@ -63,10 +75,11 @@ const FlashCard: React.FC = () => {
                 variants={card}
                 animate={controls}
             >
-                <h3>Question #</h3>
+                <h3> Question #{SAMPLE_FLASHCARDS[flashcardID].id} </h3>
                 {flip ? 
-                    <p>{SAMPLE_FLASHCARDS[0].answer}</p> : <p>{SAMPLE_FLASHCARDS[0].question} </p>
-
+                    <p> {SAMPLE_FLASHCARDS[flashcardID].answer} </p> 
+                    : 
+                    <p> {SAMPLE_FLASHCARDS[flashcardID].question} </p>
                 }
                
 
@@ -94,7 +107,7 @@ interface SAMPLE_FLASHCARD_TYPE {
 }
 
 const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
-    id: 1,
+    id: 0,
     question: "this is the first question text",
     answer: "this is the answer to the first question",
     options: [
@@ -107,7 +120,7 @@ const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
 }
 
 const FLASHCARD_TWO: SAMPLE_FLASHCARD_TYPE = {
-    id: 2,
+    id: 1,
     question: "this is the second question text",
     answer: "this is the answer to the second question",
     options: [
