@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 
 const options = {
     hidden: { opacity: 0, x: 100},
-    visible: i => ({ 
+    visible: (i: number) => ({ 
         opacity: 1,
         x: 0,
         transition: {
@@ -33,8 +33,8 @@ const FlashCard: React.FC = () => {
 
 
     // Flashcard Animation Handlers
-    function handleClickFlip(e: any){
-            // e.preventDefault();
+    function handleClickFlip(){
+         
             setFlip(!flip);
             controls.start({
                 rotateX: 360,
@@ -51,8 +51,7 @@ const FlashCard: React.FC = () => {
             
     } 
 
-    function handleClickNew(e: any){
-            // e.preventDefault();
+    function handleClickNew(){
            
             controls.start({
                 rotate: [0, 720, -90, 0],
@@ -64,10 +63,7 @@ const FlashCard: React.FC = () => {
             setFlip(false);
             setRevealChoices(false);
             setFlashcardID( Math.floor(Math.random() * totalCards) );            
-
-    } 
-
-    
+    }  
 
     return (
         <div className='flash-card-container'>
