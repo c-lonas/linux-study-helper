@@ -4,15 +4,16 @@ import { motion, useAnimation } from "framer-motion";
 
 
 
-const card = {
-    hidden: { opacity: 0, y: 100},
-    visible: { 
+const options = {
+    hidden: { opacity: 0, x: 100},
+    visible: i => ({ 
         opacity: 1,
-        y: 0,
+        x: 0,
         transition: {
-            type: 'spring', 
+            type: 'spring',
+            delay: (i *.25) 
         }
-    }
+    })
 }
 
 
@@ -81,11 +82,16 @@ const FlashCard: React.FC = () => {
                     <p> {SAMPLE_FLASHCARDS[flashcardID].question} </p>
                 }
                 { !flip ? revealChoices ?
-                    <motion.div 
-                    layout
-                    >
-                    {SAMPLE_FLASHCARDS[flashcardID].options.map(option => {
-                        return <motion.div layout>{option}</motion.div>
+                    <motion.div>
+                    {SAMPLE_FLASHCARDS[flashcardID].options.map((option, i) => {
+                        return <motion.li 
+                                variants={options}
+                                initial="hidden"
+                                animate="visible"
+                                custom={i}
+                                >
+                                    {option}
+                                </motion.li>
                     })}
                     
                     </motion.div>
