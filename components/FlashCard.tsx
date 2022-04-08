@@ -81,7 +81,14 @@ const FlashCard: React.FC = () => {
                     <p> {SAMPLE_FLASHCARDS[flashcardID].question} </p>
                 }
                 { !flip ? revealChoices ?
-                    <motion.p layout>Revealing Choices</motion.p>
+                    <motion.div 
+                    layout
+                    >
+                    {SAMPLE_FLASHCARDS[flashcardID].options.map(option => {
+                        return <motion.div layout>{option}</motion.div>
+                    })}
+                    
+                    </motion.div>
                     :    
                     <motion.p layout>Not Revealing Choices</motion.p> : <></>   
                 }
