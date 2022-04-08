@@ -24,6 +24,8 @@ const FlashCard: React.FC = () => {
     // Flashcard Flip-State Handler
     const [flip , setFlip] = useState<boolean>(false)
 
+    const [revealChoices, setRevealChoices] = useState<boolean>(false)
+
     const [flashcardID, setFlashcardID] = useState<number>(0)
 
     const totalCards = SAMPLE_FLASHCARDS.length
@@ -38,6 +40,7 @@ const FlashCard: React.FC = () => {
                 rotate: 360,
                 scale: [1, 1.2, 1.3, 1.4, 1.5, 1.51, 1.5, .9, 1],
                 borderRadius: ["0%", "3%", "0%"],
+                boxShadow: ["10px 10px 10px black", "15px 15px 15px var(--color-theme)", "10px 10px 10px black"],
                 transition: { type: 'spring', stiffness: 35, },
                 transitionEnd: {
                     rotateX: 0,
@@ -51,42 +54,44 @@ const FlashCard: React.FC = () => {
             // e.preventDefault();
            
             controls.start({
-                rotate: [0, 720, 0],
-                scale: [1, .001, 1],
-                y: [0, -200, 0],
-                x: [0, 200, 0],
-                boxShadow: "5px 5px 5px var(--color-theme)",
-                transition: { type: 'spring', stiffness: 50},
-                transitionEnd: { y: 0, x: 0, rotate: 0, scale: 1}
+                rotate: [0, 720, -90, 0],
+                scale: [1, 0, 0, 1],
+                y: [0, -200, -200, 0],
+                x: [0, 200, -200, 0],
+                transition: { type: 'spring', stiffness: 75},
             });
-            setFlashcardID( Math.floor(Math.random() * totalCards) );
-
-            
+            setFlip(false);
+            setRevealChoices(false);
+            setFlashcardID( Math.floor(Math.random() * totalCards) );            
 
     } 
 
-    
-    // flashcardID = ();
     
 
     return (
         <div className='flash-card-container'>
             <motion.div className="flash-card"
-                variants={card}
                 animate={controls}
+                onClick={handleClickFlip}
             >
                 <h3> Question #{SAMPLE_FLASHCARDS[flashcardID].id} </h3>
-                {flip ? 
+                { flip ? 
                     <p> {SAMPLE_FLASHCARDS[flashcardID].answer} </p> 
                     : 
                     <p> {SAMPLE_FLASHCARDS[flashcardID].question} </p>
                 }
+                { !flip ? revealChoices ?
+                    <motion.p layout>Revealing Choices</motion.p>
+                    :    
+                    <motion.p layout>Not Revealing Choices</motion.p> : <></>   
+                }
+                
                
 
             </motion.div>
 
             <div className='flash-card-controls'>
-                <button > Reveal Multiple Choice </button>
+                <button onClick={() => setRevealChoices(!revealChoices)} > Reveal Multiple Choice </button>
                 <button onClick={handleClickFlip} > Flip Card </button>
                 <button onClick={handleClickNew} > New Card </button>
             </div>
