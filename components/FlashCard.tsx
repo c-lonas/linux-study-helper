@@ -40,7 +40,6 @@ const FlashCard: React.FC = () => {
                 rotateX: 360,
                 rotate: 360,
                 scale: [1, 1.2, 1.3, 1.4, 1.5, 1.51, 1.5, .9, 1],
-                borderRadius: ["0%", "3%", "0%"],
                 boxShadow: ["10px 10px 10px black", "15px 15px 15px var(--color-theme)", "10px 10px 10px black"],
                 transition: { type: 'spring', stiffness: 35, },
                 transitionEnd: {
@@ -71,11 +70,11 @@ const FlashCard: React.FC = () => {
                 animate={controls}
                 onClick={handleClickFlip}
             >
-                <h3> Question #{SAMPLE_FLASHCARDS[flashcardID].id} </h3>
+                <motion.h3 layout> Question #{SAMPLE_FLASHCARDS[flashcardID].id} </motion.h3>
                 { flip ? 
-                    <p> {SAMPLE_FLASHCARDS[flashcardID].answer} </p> 
+                    <motion.p layout> {SAMPLE_FLASHCARDS[flashcardID].answer} </motion.p> 
                     : 
-                    <p> {SAMPLE_FLASHCARDS[flashcardID].question} </p>
+                    <motion.p layout> {SAMPLE_FLASHCARDS[flashcardID].question} </motion.p>
                 }
                 { !flip ? revealChoices ?
                     <motion.div>
@@ -92,7 +91,7 @@ const FlashCard: React.FC = () => {
                     
                     </motion.div>
                     :    
-                    <motion.p layout>Not Revealing Choices</motion.p> : <></>   
+                    <motion.p layout> Not Revealing Choices </motion.p> : <></>   
                 }
                 
                

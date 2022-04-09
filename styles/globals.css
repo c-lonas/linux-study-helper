@@ -112,6 +112,7 @@ a {
     height: 200px;
     border-style: solid;
     border-color: #313131;
+    border-radius: .5rem;
     box-shadow: 10px 10px 10px black;
     background-color: var(--color-gray);
     color: var(--color-card-text);
