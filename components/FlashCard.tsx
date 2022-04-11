@@ -1,5 +1,7 @@
 import React, { FunctionComponent, useState } from 'react';
 
+import FlashcardList from './FlashcardList';
+
 import { motion, useAnimation } from "framer-motion";
 
 
@@ -20,6 +22,9 @@ const options = {
 
 const FlashCard: React.FC = () => {
 
+    const data = FlashcardList
+    const totalCards = FlashcardList.length
+
     const controls = useAnimation()
 
     // Flashcard Flip-State Handler
@@ -29,7 +34,7 @@ const FlashCard: React.FC = () => {
 
     const [flashcardID, setFlashcardID] = useState<number>(0)
 
-    const totalCards = SAMPLE_FLASHCARDS.length
+    
 
 
     // Flashcard Animation Handlers
@@ -70,15 +75,15 @@ const FlashCard: React.FC = () => {
                 animate={controls}
                 onClick={handleClickFlip}
             >
-                <motion.h3 layout> Question #{SAMPLE_FLASHCARDS[flashcardID].id} </motion.h3>
+                <motion.h3 layout> Question #{data[flashcardID].id} </motion.h3>
                 { flip ? 
-                    <motion.p layout> {SAMPLE_FLASHCARDS[flashcardID].answer} </motion.p> 
+                    <motion.p layout> {data[flashcardID].answer} </motion.p> 
                     : 
-                    <motion.p layout> {SAMPLE_FLASHCARDS[flashcardID].question} </motion.p>
+                    <motion.p layout> {data[flashcardID].question} </motion.p>
                 }
                 { !flip ? revealChoices ?
                     <motion.div>
-                    {SAMPLE_FLASHCARDS[flashcardID].options.map((option, i) => {
+                    {data[flashcardID].options.map((option, i) => {
                         return <motion.li 
                                 variants={options}
                                 initial="hidden"
@@ -119,36 +124,36 @@ interface SAMPLE_FLASHCARD_TYPE {
         options: [string, string, string, string]
 }
 
-const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
-    id: 0,
-    question: "this is the first question text",
-    answer: "this is the answer to the first question",
-    options: [
-      'option a',
-      'option b',
-      'option c',
-      'option d',
+// const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
+//     id: 0,
+//     question: "this is the first question text",
+//     answer: "this is the answer to the first question",
+//     options: [
+//       'option a',
+//       'option b',
+//       'option c',
+//       'option d',
 
-    ]
-}
+//     ]
+// }
 
-const FLASHCARD_TWO: SAMPLE_FLASHCARD_TYPE = {
-    id: 1,
-    question: "this is the second question text",
-    answer: "this is the answer to the second question",
-    options: [
-      'option 1',
-      'option 2',
-      'option 3',
-      'option 4',
+// const FLASHCARD_TWO: SAMPLE_FLASHCARD_TYPE = {
+//     id: 1,
+//     question: "this is the second question text",
+//     answer: "this is the answer to the second question",
+//     options: [
+//       'option 1',
+//       'option 2',
+//       'option 3',
+//       'option 4',
 
-    ]
+//     ]
 
-}
+// }
 
-const SAMPLE_FLASHCARDS: SAMPLE_FLASHCARD_TYPE[] = []
+// const SAMPLE_FLASHCARDS: SAMPLE_FLASHCARD_TYPE[] = []
 
-SAMPLE_FLASHCARDS.push(FLASHCARD_ONE, FLASHCARD_TWO)
+// SAMPLE_FLASHCARDS.push(FLASHCARD_ONE, FLASHCARD_TWO)
 
 
 
