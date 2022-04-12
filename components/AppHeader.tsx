@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react';
+import Image from 'next/image';
 
 import { motion } from "framer-motion";
 
@@ -32,10 +33,10 @@ const AppHeader: React.FC = () => {
                 initial="hidden"
                 animate="visible"       
             >
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Home </motion.li>
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Settings </motion.li>
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > Info </motion.li>
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > login </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/linux-white.png" height={20} width={20} /> Home </motion.li> 
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/settings-white.png" height={20} width={20} /> Settings </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/info-white.png" height={20} width={20} /> Info </motion.li>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/login-white.png" height={20} width={20} /> login </motion.li>
             </motion.ul>
         </header>
     )
