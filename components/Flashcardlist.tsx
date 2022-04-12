@@ -1,54 +1,39 @@
-import React from 'react'
+// Comment out to see if this line is needed:
+//import React from 'react'
 
+
+// We could make serparate FlashcardList Variables for each Exam? 
+// or each Topic even potentially?
 
 const FlashcardList = [
     {
-    id: 0,
-    question: "how do you spell linux",
-    answer: "it's in the question dummy",
-    options: [
-    'option a',
-    'option b',
-    'option c',
-    'option d',
-
-    ]
+        id: 0,
+        question: "how do you spell linux",
+        answer: "it's in the question dummy",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.1
     },
-    {
-    id: 1,
-    question: "this is the first question text",
-    answer: "this is the answer to the first question",
-    options: [
-    'option a',
-    'option b',
-    'option c',
-    'option d',
 
-    ]
-    },
     {
-    id: 2,
-    question: "this is the second question text",
-    answer: "this is the answer to the second question",
-    options: [
-    'one',
-    'two',
-    'three',
-    'four',
-
-    ]
-    },
-    {
-    id: 3,
-    question: "this is the third question text",
-    answer: "this is the answer to the third question",
-    options: [
-    'x',
-    'y',
-    'z',
-    'aa',
-
-    ]
+        id: 1,
+        question: "here's another question",
+        answer: "here's another answer",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.1
     },
 
 ]

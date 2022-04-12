@@ -22,21 +22,35 @@ const options = {
 
 const FlashCard: React.FC = () => {
 
-    const data = FlashcardList
+
+    // We can make this a state that chooses what flashcard list you are pulling from
+
+    //the downside of a bunch of discrete lists is you might lose the option to pull a random one from the total pile
+    // we also need to think about how to make sublists, like can there be a pile for ones you've already pulled so you can't pull the same card again?
+    // would that even be a good thing?
+
+    const [data, setData] = useState(FlashcardList)
+    
+
+
+
+    // This should maybe be data.length if I'm gonna make data a state thing
     const totalCards = FlashcardList.length
 
-    const controls = useAnimation()
+    
 
     // Flashcard Flip-State Handler
     const [flip , setFlip] = useState<boolean>(false)
 
+    // Flashcard Multiple Choice Handler
     const [revealChoices, setRevealChoices] = useState<boolean>(false)
 
+    // Flashcard ID handler
     const [flashcardID, setFlashcardID] = useState<number>(0)
 
     
 
-
+    const controls = useAnimation()
     // Flashcard Animation Handlers
     function handleClickFlip(){
          
@@ -75,11 +89,11 @@ const FlashCard: React.FC = () => {
                 animate={controls}
                 onClick={handleClickFlip}
             >
-                <motion.h3 layout> Question #{data[flashcardID].id} </motion.h3>
+                <motion.h3 layout> Card #{data[flashcardID].id} </motion.h3>
                 { flip ? 
-                    <motion.p layout> {data[flashcardID].answer} </motion.p> 
+                    <motion.p layout> Answer: {data[flashcardID].answer} </motion.p> 
                     : 
-                    <motion.p layout> {data[flashcardID].question} </motion.p>
+                    <motion.p layout> Question: {data[flashcardID].question} </motion.p>
                 }
                 { !flip ? revealChoices ?
                     <motion.div>
@@ -96,7 +110,7 @@ const FlashCard: React.FC = () => {
                     
                     </motion.div>
                     :    
-                    <motion.p layout> Not Revealing Choices </motion.p> : <></>   
+                    <motion.p layout></motion.p> : <></>   
                 }
                 
                
@@ -104,9 +118,13 @@ const FlashCard: React.FC = () => {
             </motion.div>
 
             <div className='flash-card-controls'>
-                <button onClick={() => setRevealChoices(!revealChoices)} > Reveal Multiple Choice </button>
-                <button onClick={handleClickFlip} > Flip Card </button>
-                <button onClick={handleClickNew} > New Card </button>
+                { !flip ?
+                     <motion.button layout onClick={() => setRevealChoices(!revealChoices)} >{revealChoices ? "Hide" : "Reveal"} Choices </motion.button>
+                     :<></>
+                }
+               
+                <motion.button layout onClick={handleClickFlip} > Flip Card </motion.button>
+                <motion.button layout onClick={handleClickNew} > New Card </motion.button>
             </div>
 
 
@@ -116,7 +134,7 @@ const FlashCard: React.FC = () => {
 }
 
 
-
+// This should be obsolete now, but how is it currently getting the intellisense info?
 interface SAMPLE_FLASHCARD_TYPE {
         id: number;
         question: string;
@@ -124,36 +142,6 @@ interface SAMPLE_FLASHCARD_TYPE {
         options: [string, string, string, string]
 }
 
-// const FLASHCARD_ONE: SAMPLE_FLASHCARD_TYPE = {
-//     id: 0,
-//     question: "this is the first question text",
-//     answer: "this is the answer to the first question",
-//     options: [
-//       'option a',
-//       'option b',
-//       'option c',
-//       'option d',
-
-//     ]
-// }
-
-// const FLASHCARD_TWO: SAMPLE_FLASHCARD_TYPE = {
-//     id: 1,
-//     question: "this is the second question text",
-//     answer: "this is the answer to the second question",
-//     options: [
-//       'option 1',
-//       'option 2',
-//       'option 3',
-//       'option 4',
-
-//     ]
-
-// }
-
-// const SAMPLE_FLASHCARDS: SAMPLE_FLASHCARD_TYPE[] = []
-
-// SAMPLE_FLASHCARDS.push(FLASHCARD_ONE, FLASHCARD_TWO)
 
 
 

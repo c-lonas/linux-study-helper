@@ -23,17 +23,6 @@ const Home: NextPage = () => {
         </h1>
         <FlashCard />
 
-        {/* <div className='option-cntr'>
-          <div className='option-card option-card-1'>
-            <p className='option-card-text'> Begin </p>
-          </div>
-          <div className='option-card option-card-2'>
-            <p className='option-card-text'>Quiz Mode</p>
-          </div>
-
-        </div> */}
-
-
       </main>
       <AppFooter />
     </div>

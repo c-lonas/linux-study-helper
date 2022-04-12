@@ -3,7 +3,6 @@ import React, { FunctionComponent } from 'react';
 import { motion } from "framer-motion";
 
 
-
 const list = {
     hidden: { opacity: 0 },
     visible: { 
