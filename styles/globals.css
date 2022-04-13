@@ -51,6 +51,7 @@ a {
   }
 
   .header-nav-list {
+    position: relative;
     width: 100%;
     list-style-type: none;
     display: flex;
@@ -60,6 +61,23 @@ a {
 
   .nav-image {
 
+  }
+
+  .nav-settings-dropdown {
+    position: absolute;
+    width: 8rem;
+    height: 5rem;
+    background-color: #b5bdc4;
+    color: black;
+    border-radius: 5%;
+    border-style: solid;
+    border-color: var(--color-bg);
+    padding: 5px;
+    box-shadow: 5px 5px 5px black;
+  }
+
+  .nav-settings-dropdown-list {
+    list-style-type: none;
   }
 
   .option-cntr {
