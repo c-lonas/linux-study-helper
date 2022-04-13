@@ -29,6 +29,7 @@ const item = {
 
 const AppHeader: React.FC = () => {
     const [showSettings, setShowSettings] = useState<boolean>(false);
+    const [showSecondaryEssentials, setShowSecondaryEssentials] = useState<boolean>(false);
 
     return (
         <header>
@@ -43,9 +44,24 @@ const AppHeader: React.FC = () => {
                         {showSettings ?
                             <motion.div className='nav-settings-dropdown'>
                                 <ul className='nav-settings-dropdown-list'>
-                                    <li> Linux Essentials </li>
-                                    <li> LPIC-1 </li>
-                                    <li> LPIC-2 </li>
+                                    <li className='dropdown-item'
+                                        onMouseOver={() => setShowSecondaryEssentials(true)}
+                                        onMouseLeave={() => setShowSecondaryEssentials(false)}
+                                    > 
+                                        Linux Essentials
+                                        {showSecondaryEssentials ?
+                                            <ul className='essentials-list'>
+                                                <li> All Essentials </li>
+                                                <li> Topic 1: The Linux Community and a Career in Open Source </li>
+                                                <li> Topic 2: Finding Your Way on a Linux System </li>
+                                                <li> Topic 3: The Power of the Command Line </li>
+                                                <li> Topic 4: The Linux Operating System </li>
+                                                <li> Topic 5: Security and File Permissions </li>
+                                            </ul> : <></>
+                                        } 
+                                    </li>
+                                    <li className='dropdown-item'> LPIC-1 (Coming Soon) </li>
+                                    <li className='dropdown-item'> LPIC-2 (Coming Soon) </li>
                                 </ul>
                             </motion.div> : <></>
                         }

@@ -33,7 +33,7 @@ const FlashcardList = [
         ],
         exam: "essentials",
         topic: 1,
-        module: 1.1
+        module: 1.2
     },
 
 ]
