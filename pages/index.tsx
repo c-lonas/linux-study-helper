@@ -9,14 +9,14 @@ import FlashCard from '../components/FlashCard'
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <div className="main-container">
       <Head>
         <title> Let's Learn Linux! </title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <AppHeader />  
-      <main className={styles.main}>
+      <main className="content-container">
         
         <h1 className={styles.title}>
           Let's Learn <a href="" target="_blank"> Linux! </a>

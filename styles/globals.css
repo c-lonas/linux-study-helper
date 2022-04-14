@@ -36,6 +36,7 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   header {
+    width: 100%;
     background-color: var(--color-theme);
     height: 3rem;
     display: flex;
@@ -49,6 +50,11 @@ a {
     display: flex;
     justify-content: flex-end;
     padding: 2rem;
+  }
+
+  .main-container {
+    /* width: 100%; */
+    overflow: hidden;
   }
 
   .header-nav-list {
