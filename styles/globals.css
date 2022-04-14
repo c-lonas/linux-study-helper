@@ -146,8 +146,13 @@ a {
     text-align: center;
   }
 
+
   #settings-li {
     background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .option-cntr {

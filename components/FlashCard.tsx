@@ -136,6 +136,10 @@ const FlashCard: React.FC = () => {
                         onClick={() => setShowSettings(!showSettings)}
                     >
                         <Image className='nav-image' src="/settings-white.png" height={20} width={20} />
+                        { !showSettings ?
+                            <Image className='nav-image' src="/carat-arrow-white.png" height={20} width={15} />
+                            : <></>
+                        }
                     </li>
                     { showSettings ? 
                     <motion.ul className='deck-controls-list'
