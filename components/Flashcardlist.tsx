@@ -23,8 +23,8 @@ const FlashcardList = [
 
     {
         id: 1,
-        question: "here's another question",
-        answer: "here's another answer",
+        question: "here's another question in essentials",
+        answer: "here's another answer in essentials",
         options: [
             'option a',
             'option b',
@@ -34,6 +34,66 @@ const FlashcardList = [
         exam: "essentials",
         topic: 1,
         module: 1.2
+    },
+
+    {
+        id: 2,
+        question: "here's a question in essentials 1.2",
+        answer: "here's another answer in essentials",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.2
+    },
+
+    {
+        id: 3,
+        question: "here's a question in essentials 1.3",
+        answer: "here's another answer in essentials",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.3
+    },
+
+    {
+        id: 4,
+        question: "here's a question in essentials 1.4",
+        answer: "here's another answer in essentials",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.4
+    },
+
+    {
+        id: 5,
+        question: "here's a question in essentials 1.5",
+        answer: "here's another answer in essentials",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.5
     },
 
 ]

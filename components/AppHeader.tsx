@@ -31,6 +31,8 @@ const AppHeader: React.FC = () => {
     const [showSettings, setShowSettings] = useState<boolean>(false);
     const [showSecondaryEssentials, setShowSecondaryEssentials] = useState<boolean>(false);
 
+    const [flashcardDeck, setFlashcardDeck] = useState();
+
     return (
         <header>
             <motion.ul className='header-nav-list'
@@ -39,7 +41,7 @@ const AppHeader: React.FC = () => {
                 animate="visible"       
             >
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/linux-white.png" height={20} width={20} /> Home </motion.li> 
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} onClick={() => setShowSettings(!showSettings)} > <Image className='nav-image' src="/settings-white.png" height={20} width={20} /> 
+                    {/* <motion.li variants={item} whileHover={{ scale: 1.1 }} onClick={() => setShowSettings(!showSettings)} > <Image className='nav-image' src="/settings-white.png" height={20} width={20} /> 
                         Settings
                         {showSettings ?
                             <motion.div className='nav-settings-dropdown'>
@@ -65,7 +67,7 @@ const AppHeader: React.FC = () => {
                                 </ul>
                             </motion.div> : <></>
                         }
-                    </motion.li>
+                    </motion.li> */}
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/info-white.png" height={20} width={20} /> Info </motion.li>
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/login-white.png" height={20} width={20} /> login </motion.li>
             </motion.ul>

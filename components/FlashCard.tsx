@@ -1,4 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
+import Image from 'next/image';
+
 
 import FlashcardList from './FlashcardList';
 
@@ -18,6 +20,19 @@ const options = {
     })
 }
 
+const list = {
+    hidden: { opacity: 0, y: -35 },
+    visible: { 
+        opacity: 1,
+        y: 0, 
+        transition: {
+            staggerChildren: 2,
+            type: 'spring', 
+        }
+    }
+}
+
+
 
 
 const FlashCard: React.FC = () => {
@@ -30,14 +45,10 @@ const FlashCard: React.FC = () => {
     // would that even be a good thing?
 
     const [data, setData] = useState(FlashcardList)
-    
-
-
 
     // This should maybe be data.length if I'm gonna make data a state thing
     const totalCards = FlashcardList.length
 
-    
 
     // Flashcard Flip-State Handler
     const [flip , setFlip] = useState<boolean>(false)
@@ -47,6 +58,9 @@ const FlashCard: React.FC = () => {
 
     // Flashcard ID handler
     const [flashcardID, setFlashcardID] = useState<number>(0)
+
+    const [showSettings, setShowSettings] = useState<boolean>(false);
+
 
     
 
@@ -76,7 +90,7 @@ const FlashCard: React.FC = () => {
                 scale: [1, 0, 0, 1],
                 y: [0, -200, -200, 0],
                 x: [0, 200, -200, 0],
-                transition: { type: 'spring', stiffness: 75},
+                transition: { type: 'spring', stiffness: 150},
             });
             setFlip(false);
             setRevealChoices(false);
@@ -86,6 +100,7 @@ const FlashCard: React.FC = () => {
     return (
         <div className='flash-card-container'>
             <motion.div className="flash-card"
+                initial={{x:0, y:0, rotate:0, scale:1}}
                 animate={controls}
                 onClick={handleClickFlip}
             >
@@ -113,9 +128,29 @@ const FlashCard: React.FC = () => {
                     <motion.p layout></motion.p> : <></>   
                 }
                 
-               
-
             </motion.div>
+
+            <div className="deck-controls">
+                <ul className='deck-controls-list'>
+                    <li id='settings-li'
+                        onClick={() => setShowSettings(!showSettings)}
+                    >
+                        <Image className='nav-image' src="/settings-white.png" height={20} width={20} />
+                    </li>
+                    { showSettings ? 
+                    <motion.ul className='deck-controls-list'
+                        variants={list}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        <li> All </li>
+                        <li> 1.1 </li>
+                        <li> 1.2 </li>
+                    </motion.ul>
+                    : <></>  
+                    }
+                </ul>
+            </div>
 
             <div className='flash-card-controls'>
                 { !flip ?
