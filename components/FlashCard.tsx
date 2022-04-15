@@ -44,24 +44,22 @@ const FlashCard: React.FC = () => {
     // we also need to think about how to make sublists, like can there be a pile for ones you've already pulled so you can't pull the same card again?
     // would that even be a good thing?
 
-    const [data, setData] = useState(FlashcardList)
+    const [data, setData] = useState(FlashcardList);
 
     // This should maybe be data.length if I'm gonna make data a state thing
-    const totalCards = FlashcardList.length
+    const [totalCards, setTotalCards] = useState(data.length);
 
 
     // Flashcard Flip-State Handler
-    const [flip , setFlip] = useState<boolean>(false)
+    const [flip , setFlip] = useState<boolean>(false);
 
     // Flashcard Multiple Choice Handler
-    const [revealChoices, setRevealChoices] = useState<boolean>(false)
+    const [revealChoices, setRevealChoices] = useState<boolean>(false);
 
     // Flashcard ID handler
-    const [flashcardID, setFlashcardID] = useState<number>(0)
+    const [flashcardID, setFlashcardID] = useState<number>(0);
 
     const [showSettings, setShowSettings] = useState<boolean>(false);
-
-
     
 
     const controls = useAnimation()
@@ -94,8 +92,33 @@ const FlashCard: React.FC = () => {
             });
             setFlip(false);
             setRevealChoices(false);
-            setFlashcardID( Math.floor(Math.random() * totalCards) );            
+            setFlashcardID( Math.floor(Math.random() * totalCards) );
+            console.log("Total Cards", totalCards) 
+            console.log("ID", flashcardID)
+           
     }  
+
+
+
+    // Deck Filter Functions
+    function filterDeck(module: number) {
+        
+        // if (module === 0) {
+        //     newDeck = FlashcardList.filter(FlashcardList => FlashcardList.module >= 1);
+        // } else {
+        //     newDeck = FlashcardList.filter(FlashcardList => FlashcardList.module === module);
+        // }
+
+        let newDeck = (module < 1 ) ? FlashcardList.filter(FlashcardList => FlashcardList.module >= 1) : FlashcardList.filter(FlashcardList => FlashcardList.module === module) 
+        console.log(newDeck)
+
+        setData(newDeck);
+
+        handleClickNew();
+
+        
+    }
+
 
     return (
         <div className='flash-card-container'>
@@ -147,9 +170,12 @@ const FlashCard: React.FC = () => {
                         initial="hidden"
                         animate="visible"
                     >
-                        <li> All </li>
-                        <li> 1.1 </li>
-                        <li> 1.2 </li>
+                        <li onClick={() => filterDeck(0)} > All </li>
+                        <li onClick={() => filterDeck(1.1)} > 1.1 </li>
+                        <li onClick={() => filterDeck(1.2)} > 1.2 </li>
+                        <li onClick={() => filterDeck(1.3)} > 1.3 </li>
+                        <li onClick={() => filterDeck(1.4)} > 1.4 </li>
+                        <li onClick={() => filterDeck(1.5)} > 1.5 </li>
                     </motion.ul>
                     : <></>  
                     }

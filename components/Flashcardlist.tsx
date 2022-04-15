@@ -96,6 +96,21 @@ const FlashcardList = [
         module: 1.5
     },
 
+    {
+        id: 6,
+        question: "here's a different question in essentials 1.1",
+        answer: "here's another answer in essentials",
+        options: [
+            'option a',
+            'option b',
+            'option c',
+            'option d',
+        ],
+        exam: "essentials",
+        topic: 1,
+        module: 1.1
+    },
+
 ]
 
 export default FlashcardList
