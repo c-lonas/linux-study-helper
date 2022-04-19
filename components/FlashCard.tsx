@@ -152,8 +152,8 @@ const FlashCard: React.FC = () => {
                 }
                 
             </motion.div>
-
-            <div className="deck-controls">
+            
+            {/* <div className="deck-controls">
                 <ul className='deck-controls-list'>
                     <li id='settings-li'
                         onClick={() => setShowSettings(!showSettings)}
@@ -180,7 +180,7 @@ const FlashCard: React.FC = () => {
                     : <></>  
                     }
                 </ul>
-            </div>
+            </div> */}
 
             <div className='flash-card-controls'>
                 { !flip ?
