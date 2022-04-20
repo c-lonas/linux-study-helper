@@ -6,6 +6,10 @@
 // or each Topic even potentially?
 
 const FlashcardList = [
+
+    //       Topic 1
+
+    // Module 1.1
     {
         id: 0,
         question: "Linux",
@@ -134,10 +138,10 @@ const FlashcardList = [
 
     {
         id: 9,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Fedora",
+        answer: "Initiated by Red Hat, this distribution was founded in 2003, and is aimed at desktop computers. Like all Red Hat distributions, it uses the rpm package format. Fedora is progressive and adopts new technologies quickly, and is sometimes considered a test-bed for technologies that might later be included in RHEL",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
+            'Initiated by Red Hat, this distribution was founded in 2003. Because it adopts new technologies quickly, some consider it a "test bed" for REHL',
             'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
             'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
         ],
@@ -148,12 +152,12 @@ const FlashcardList = [
 
     {
         id: 10,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "SUSE Linux",
+        answer: "The first version of SUSE Linux was released in 1994. SUSE Linux is mostly known for its YaST configuration tool, which allows administrators to install and configure software and hardware, set up servers and networks. In 2004, SUSE released the openSUSE project.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
+            'A distribution released in 1994 that is known for its YaST configuration tool',
             'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
         ],
         exam: "essentials",
         topic: 1,
@@ -162,12 +166,12 @@ const FlashcardList = [
 
     {
         id: 11,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Embedded System",
+        answer: "A combination of computer hardware and software designed for a specific function within a larger system. These systems are found in automotive, medical, and military applications. Two of the most popular embedded software projects are Android (mostly for mobile phones) and Raspbian (mostly for Raspberry Pi)",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'A bundle of software and a corresponding configuration and documentation',
+            'A bundle that consists of a linux kernel and a selection of applications that are maintained by a company or user community',
+            'A combination of computer hardware and software designed for a specific function within a larger system',
         ],
         exam: "essentials",
         topic: 1,
@@ -176,12 +180,12 @@ const FlashcardList = [
 
     {
         id: 12,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "What are some major advantages of Linux over proprietary embedded software?",
+        answer: "Cross-vendor platform compatibility, development, support, and no license fees",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'I use arch, btw',
+            'Cross-vendor platform compatibility, development, support, and no license fees',
+            'Universal hardware support, one standardized edition (distribution), and an easy learning curve',
         ],
         exam: "essentials",
         topic: 1,
@@ -190,12 +194,12 @@ const FlashcardList = [
 
     {
         id: 13,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Android",
+        answer: "An operating system primarily for mobile devices developed by Google. Android Inc. was founded in 2003 in Palo Alto, CA, and was bought by Google in 2005. The base of Android is a modified Linux Kernel with additional open source software. Android is freely available in open source as Android Open Source Project (AOSP), although Google also offers proprietary components including Google Calendar, Google Maps, Google Mail, Chrome browser, and Google Play Store.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'An operating system primarily for mobile devices developed by Google',
+            'An operating system primarily for enterprise servers developed by Meta (formerly Facebook, Inc.)',
+            'An advanced robot operating with artificial intelligence, sometimes meeting crewmembers of the Enterprise (NCC-1701)',
         ],
         exam: "essentials",
         topic: 1,
@@ -204,12 +208,12 @@ const FlashcardList = [
 
     {
         id: 14,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Raspberry Pi",
+        answer: "Raspberry Pi is a low cost, credit-card sized computer that can function as a full-functionality desktop computer, but can also be used within an embedded Linux system. It is developed by the Raspberry Pi Foundation, a UK based charity. The specialties of Raspberry Pi include a set of General Purpose Input-Output (GPIO) pins which can be used to attach electronic devices and extension boards.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'A baked dish made of pastry dough casing that contains a filling of edible fruit from a multitude of species in the genus Rubus of the rose family',
+            'An operating system primarily for mobile devices developed by Google',
+            'A low cost, credit-card sized computer that can function as a full-functionality desktop computer',
         ],
         exam: "essentials",
         topic: 1,
@@ -218,12 +222,12 @@ const FlashcardList = [
 
     {
         id: 15,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Raspbian",
+        answer: "A Debian-based Linux distribution for the Raspberry Pi (Raspberry + Debian = Raspbian)",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'A Debian-based Linux distribution for the Raspberry Pi',
+            'A SUSE-based Linux distribution for the Raspberry Pi',
+            'An RHEL-based Linux distribution for the Raspberry Pi',
         ],
         exam: "essentials",
         topic: 1,
@@ -232,12 +236,12 @@ const FlashcardList = [
 
     {
         id: 16,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Cloud Computing",
+        answer: "A standardized way of consuming computing resources, either by buying them for a public cloud provider or by a running a private cloud. As of 2017, Linux runs 90% of the public cloud workload.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            "A pedagogical technique for explaining the conglomeration of individual technological advances, or 'droplets', popularized in the mid-2000's",
+            'A new iteration of the World Wide Web based on blockchain technology, emphasizing decentralization and token-based economics',
+            'A standardized way of consuming computing resources, either by buying them from a public cloud provider or by running a private cloud',
         ],
         exam: "essentials",
         topic: 1,
@@ -246,12 +250,12 @@ const FlashcardList = [
 
     {
         id: 17,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "IaaS",
+        answer: "Infrastructure as a Service (IaaS) instances are virtual machines that are provisioned within minutes in the cloud. (B is PaaS, C is SaaS)",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'IaaS instances are virtual machines that are provisioned within minutes in the cloud',
+            'IaaS instances hardware and software tools available for purchase within the cloud',
+            "IaaS instances are software that's available via a third-party over the internet",
         ],
         exam: "essentials",
         topic: 1,
@@ -260,12 +264,12 @@ const FlashcardList = [
 
     {
         id: 18,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "How is Debian GNU/Linux different from Ubuntu? Name two aspects.",
+        answer: "1) Ubuntu is optimized for ease of use, and is often recommended to beginners for that reason- 2) Debian is considered more stable than Ubuntu, because it receives fewer updates that are more thoroughly tested. As a tradeoff, Debian is less likely to have the newest technologies and software releases.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            '1) Ubuntu optimized for ease of use, 2) Debian is considered more stable',
+            '1) Ubuntu comes from the RHEL family, 2) Debian is considered more progressive',
+            '1) Ubuntu is free, 2) Debian is considered more hipster',
         ],
         exam: "essentials",
         topic: 1,
@@ -274,12 +278,12 @@ const FlashcardList = [
 
     {
         id: 19,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "What are the most common environments/platforms Linux is used for? Name three different environments/platforms and name one distribution you can use for each.",
+        answer: "Smartphone (Android), Desktop (Ubuntu, Debian, Fedora), and Server (CentOS, RHEL)",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'IoT (Mint), Desktop (Fedora), and Content Management Systems (RHEL)',
+            'Smartphone (Gentoo), Robotics (Kali), and Server (openSUSE)',
+            'Smartphone (Android), Desktop (Ubuntu), and Server (CentOS)',
         ],
         exam: "essentials",
         topic: 1,
@@ -287,13 +291,13 @@ const FlashcardList = [
     },
 
     {
-        id:20,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        id: 20,
+        question: "You are planning to install a Linux distribution in a new environment. Name at least four things that you should consider when choosing a distribution.",
+        answer: "Cost, Performance, Scalability, Stability, Hardware Demands",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'Hardware Demands, Licensing, Algorithmic Complexity, Cost',
+            'Cost, Performance, Scalability, Stability',
+            'Legality, Aesthetic, Salinity, Hopium',
         ],
         exam: "essentials",
         topic: 1,
@@ -302,12 +306,12 @@ const FlashcardList = [
 
     {
         id: 21,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Explain three major advantages of cloud computing",
+        answer: "Flexibility, Easy to Recover, and Low Use Cost",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'Flexibility, Easy to Recover, and Low Use Cost',
+            'Visibility, Communication, and Technological Density',
+            'Easy to Recover, Momentum, and Bracketing',
         ],
         exam: "essentials",
         topic: 1,
@@ -316,12 +320,12 @@ const FlashcardList = [
 
     {
         id: 22,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "Considering cost and performance, which distributions are mostly suitable for a business that aims to reduce licensing costs, while keeping performance at its highest? Explain why.",
+        answer: "CentOS includes Red Hat products while being free. Ubuntu LTS guarantees long support cycles, and Debian GNU/Linux are also often used in enterprise environments",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'GoboLinux',
+            'RHEL',
+            'CentOS',
         ],
         exam: "essentials",
         topic: 1,
@@ -330,12 +334,12 @@ const FlashcardList = [
 
     {
         id: 23,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "What are the major advantages of the Raspberry Pi and which functions can they take in business?",
+        answer: "Very small hardware and low cost. Can handle web traffic, it can be used as a server, a firewall, main board for robots and other small devices",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'Very small hardware and low cost',
+            'Can replace high-end GPUs',
+            'nom nom nom',
         ],
         exam: "essentials",
         topic: 1,
@@ -344,30 +348,36 @@ const FlashcardList = [
 
     {
         id: 24,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "What range of distributions does Amazon Cloud Services and Google Cloud offer? Name at least three common ones and two different ones.",
+        answer: "The common distributions between Amazon and Google Cloud Services are Ubuntu, CentOS and Red Hat Enterprise Linux. Each cloud provider also offers specific distributions that the other one doesn’t. Amazon has Amazon Linux and Kali Linux, while Google offers the use of FreeBSD and Windows Servers.",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'Common: Fedora, CentOS and SUSE',
+            'Common: Ubuntu, CentOS and Red Hat Enterprise Linux',
+            'Common: Gentoo, Linux Mint and Arch',
         ],
         exam: "essentials",
         topic: 1,
         module: 1.1
     },
 
+
+
+    // Module 1.2
+
+
+
     {
         id: 25,
-        question: "Ubuntu",
-        answer: "A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution. Ubuntu has a scheduled release every six months, with a long-term support (LTS) release every 2 years",
+        question: "25",
+        answer: "25",
         options: [
-            'An Arch-based distribution released in 2011, with a focus on user-friendliness and accessibility',
-            'A Linux distribution started by Eelco Dolstra in 2003, built on top of the Nix package manager',
-            'A Debian-based distribution created by Mark Shuttleworth and his team in 2004, aiming to be an easy-to-use distribution',
+            'A',
+            'B',
+            'C',
         ],
         exam: "essentials",
         topic: 1,
-        module: 1.1
+        module: 1.2
     },
 
 ]
