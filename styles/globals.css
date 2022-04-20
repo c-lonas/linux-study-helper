@@ -182,6 +182,12 @@ a {
     color: var(--color-theme);
     text-align: center;
   }
+
+  .multiple-choice-option {
+    font-size: 12px;
+    margin: 0 1rem;
+
+  }
   
   .flash-card-container {
     margin-top: 2rem;

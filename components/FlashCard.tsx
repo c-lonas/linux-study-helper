@@ -7,7 +7,6 @@ import FlashcardList from './FlashcardList';
 import { motion, useAnimation } from "framer-motion";
 
 
-
 const options = {
     hidden: { opacity: 0, x: 100},
     visible: (i: number) => ({ 
@@ -34,19 +33,10 @@ const list = {
 
 
 
-
 const FlashCard: React.FC = () => {
-
-
-    // We can make this a state that chooses what flashcard list you are pulling from
-
-    //the downside of a bunch of discrete lists is you might lose the option to pull a random one from the total pile
-    // we also need to think about how to make sublists, like can there be a pile for ones you've already pulled so you can't pull the same card again?
-    // would that even be a good thing?
 
     const [data, setData] = useState(FlashcardList);
 
-    // This should maybe be data.length if I'm gonna make data a state thing
     const [totalCards, setTotalCards] = useState(data.length);
 
 
@@ -58,8 +48,6 @@ const FlashCard: React.FC = () => {
 
     // Flashcard ID handler
     const [flashcardID, setFlashcardID] = useState<number>(0);
-
-    const [showSettings, setShowSettings] = useState<boolean>(false);
     
 
     const controls = useAnimation()
@@ -99,27 +87,6 @@ const FlashCard: React.FC = () => {
     }  
 
 
-
-    // Deck Filter Functions
-    function filterDeck(module: number) {
-        
-        // if (module === 0) {
-        //     newDeck = FlashcardList.filter(FlashcardList => FlashcardList.module >= 1);
-        // } else {
-        //     newDeck = FlashcardList.filter(FlashcardList => FlashcardList.module === module);
-        // }
-
-        let newDeck = (module < 1 ) ? FlashcardList.filter(FlashcardList => FlashcardList.module >= 1) : FlashcardList.filter(FlashcardList => FlashcardList.module === module) 
-        console.log(newDeck)
-
-        setData(newDeck);
-
-        handleClickNew();
-
-        
-    }
-
-
     return (
         <div className='flash-card-container'>
             <motion.div className="flash-card"
@@ -129,9 +96,9 @@ const FlashCard: React.FC = () => {
             >
                 <motion.h3 layout> Card #{data[flashcardID].id} </motion.h3>
                 { flip ? 
-                    <motion.p layout> Answer: {data[flashcardID].answer} </motion.p> 
+                    <motion.p layout> {data[flashcardID].answer} </motion.p> 
                     : 
-                    <motion.p layout> Question: {data[flashcardID].question} </motion.p>
+                    <motion.p layout> {data[flashcardID].question} </motion.p>
                 }
                 { !flip ? revealChoices ?
                     <motion.div>
@@ -141,6 +108,7 @@ const FlashCard: React.FC = () => {
                                 initial="hidden"
                                 animate="visible"
                                 custom={i}
+                                className="multiple-choice-option"
                                 >
                                     {option}
                                 </motion.li>
@@ -152,35 +120,6 @@ const FlashCard: React.FC = () => {
                 }
                 
             </motion.div>
-            
-            {/* <div className="deck-controls">
-                <ul className='deck-controls-list'>
-                    <li id='settings-li'
-                        onClick={() => setShowSettings(!showSettings)}
-                    >
-                        <Image className='nav-image' src="/settings-white.png" height={20} width={20} />
-                        { !showSettings ?
-                            <Image className='nav-image' src="/carat-arrow-white.png" height={20} width={15} />
-                            : <></>
-                        }
-                    </li>
-                    { showSettings ? 
-                    <motion.ul className='deck-controls-list'
-                        variants={list}
-                        initial="hidden"
-                        animate="visible"
-                    >
-                        <li onClick={() => filterDeck(0)} > All </li>
-                        <li onClick={() => filterDeck(1.1)} > 1.1 </li>
-                        <li onClick={() => filterDeck(1.2)} > 1.2 </li>
-                        <li onClick={() => filterDeck(1.3)} > 1.3 </li>
-                        <li onClick={() => filterDeck(1.4)} > 1.4 </li>
-                        <li onClick={() => filterDeck(1.5)} > 1.5 </li>
-                    </motion.ul>
-                    : <></>  
-                    }
-                </ul>
-            </div> */}
 
             <div className='flash-card-controls'>
                 { !flip ?
