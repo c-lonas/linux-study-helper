@@ -1,9 +1,3 @@
-// Comment out to see if this line is needed:
-//import React from 'react'
-
-
-// We could make serparate FlashcardList Variables for each Exam? 
-// or each Topic even potentially?
 
 const FlashcardList = [
 
@@ -209,7 +203,7 @@ const FlashcardList = [
     {
         id: 14,
         question: "Raspberry Pi",
-        answer: "Raspberry Pi is a low cost, credit-card sized computer that can function as a full-functionality desktop computer, but can also be used within an embedded Linux system. It is developed by the Raspberry Pi Foundation, a UK based charity. The specialties of Raspberry Pi include a set of General Purpose Input-Output (GPIO) pins which can be used to attach electronic devices and extension boards.",
+        answer: "Raspberry Pi is a low cost, credit-card sized computer that can function as a full-functionality desktop computer, but can also be used within an embedded Linux system. Raspberry Pis include General Purpose Input-Output (GPIO) pins which can be used to attach electronic devices and extension boards.",
         options: [
             'A baked dish made of pastry dough casing that contains a filling of edible fruit from a multitude of species in the genus Rubus of the rose family',
             'An operating system primarily for mobile devices developed by Google',

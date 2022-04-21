@@ -28,10 +28,7 @@ const item = {
 
 
 const AppHeader: React.FC = () => {
-    const [showSettings, setShowSettings] = useState<boolean>(false);
-    const [showSecondaryEssentials, setShowSecondaryEssentials] = useState<boolean>(false);
-
-    const [flashcardDeck, setFlashcardDeck] = useState();
+    const [showInfo, setShowInfo] = useState<boolean>(false);
 
     return (
         <header>
@@ -40,36 +37,35 @@ const AppHeader: React.FC = () => {
                 initial="hidden"
                 animate="visible"       
             >
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/linux-white.png" height={20} width={20} /> Home </motion.li> 
-                    {/* <motion.li variants={item} whileHover={{ scale: 1.1 }} onClick={() => setShowSettings(!showSettings)} > <Image className='nav-image' src="/settings-white.png" height={20} width={20} /> 
-                        Settings
-                        {showSettings ?
-                            <motion.div className='nav-settings-dropdown'>
-                                <ul className='nav-settings-dropdown-list'>
-                                    <li className='dropdown-item'
-                                        onMouseOver={() => setShowSecondaryEssentials(true)}
-                                        onMouseLeave={() => setShowSecondaryEssentials(false)}
-                                    > 
-                                        Linux Essentials
-                                        {showSecondaryEssentials ?
-                                            <ul className='essentials-list'>
-                                                <li> All Essentials </li>
-                                                <li> Topic 1: The Linux Community and a Career in Open Source </li>
-                                                <li> Topic 2: Finding Your Way on a Linux System </li>
-                                                <li> Topic 3: The Power of the Command Line </li>
-                                                <li> Topic 4: The Linux Operating System </li>
-                                                <li> Topic 5: Security and File Permissions </li>
-                                            </ul> : <></>
-                                        } 
-                                    </li>
-                                    <li className='dropdown-item'> LPIC-1 (Coming Soon) </li>
-                                    <li className='dropdown-item'> LPIC-2 (Coming Soon) </li>
-                                </ul>
-                            </motion.div> : <></>
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/linux-white.png" height={20} width={20} /> </motion.li> 
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} className='header-title'> Linux Essentials Study Tool </motion.li> 
+                    <motion.li 
+                        variants={item} 
+                        whileHover={{ scale: 1.1 }}
+                        onClick={() => setShowInfo(!showInfo)} 
+                    > <Image className='nav-image' src="/info-white.png" height={20} width={20} /> 
+                         
+                        {showInfo ? 
+                            <motion.div className='info-container' layout>
+                                <div
+                                className='info-X' 
+                                onClick={() => setShowInfo(false)}
+                                >
+                                </div>
+
+                                <p> This project is designed to help with studying for the <a href='https://www.lpi.org/our-certifications/linux-essentials-overview' target='_blank'> Linux Essentials Exam </a> from the Linux Professional Institute. </p>
+                                <br></br>
+                                <p> Questions and answers were primarily drawn from the <a href='https://learning.lpi.org/en/learning-materials/010-160/' target="_blank"> study resources </a> provided by the Linux Professional Institute. </p>
+                                <br></br>
+                                <p> This project also includes an <a href='' target="_blank">API</a> you are welcome to use in your own projects </p>
+                                <br></br>
+                                <p> Flashcards for additional modules and exams may be added in the future </p>
+                            </motion.div> 
+
+                            :<></>
                         }
-                    </motion.li> */}
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/info-white.png" height={20} width={20} /> Info </motion.li>
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/login-white.png" height={20} width={20} /> login </motion.li>
+                    </motion.li>
+                    {/* <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/login-white.png" height={20} width={20} /> </motion.li> */}
             </motion.ul>
         </header>
     )

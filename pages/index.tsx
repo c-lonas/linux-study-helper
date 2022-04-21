@@ -18,8 +18,8 @@ const Home: NextPage = () => {
       <AppHeader />  
       <main className="content-container">
         
-        <h1 className={styles.title}>
-          Let's Learn <a href="" target="_blank"> Linux! </a>
+        <h1 className="title">
+          Let's Learn <span> Linux! </span>
         </h1>
         <FlashCard />
 
