@@ -1,5 +1,17 @@
 
-const FlashcardList = [
+
+interface flashcard_data {
+        id: number;
+        question: string;
+        answer: string;
+        options: [string, string, string];
+        exam: string;
+        topic: number;
+        module: number;
+}
+
+
+const FlashcardList: Array<flashcard_data> = [
 
     //       Topic 1
 

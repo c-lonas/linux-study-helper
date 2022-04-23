@@ -1,6 +1,4 @@
 import React, { FunctionComponent, useState } from 'react';
-import Image from 'next/image';
-
 
 import FlashcardList from './FlashcardList';
 
@@ -137,14 +135,6 @@ const FlashCard: React.FC = () => {
     
 }
 
-
-// This should be obsolete now, but how is it currently getting the intellisense info?
-interface SAMPLE_FLASHCARD_TYPE {
-        id: number;
-        question: string;
-        answer: string;
-        options: [string, string, string, string]
-}
 
 
 
