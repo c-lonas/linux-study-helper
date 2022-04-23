@@ -94,7 +94,7 @@ const FlashCard: React.FC = () => {
                 animate={controls}
                 onClick={handleClickFlip}
             >
-                <motion.h3 layout> Card #{data[flashcardID].id} </motion.h3>
+                <motion.h3 layout> Card #{ (data[flashcardID].id) + 1 } </motion.h3>
                 { flip ? 
                     <motion.p layout> {data[flashcardID].answer} </motion.p> 
                     : 
@@ -123,8 +123,8 @@ const FlashCard: React.FC = () => {
 
             <div className='flash-card-controls'>
                 { !flip ?
-                     <motion.button layout onClick={() => setRevealChoices(!revealChoices)} >{revealChoices ? "Hide" : "Reveal"} Choices </motion.button>
-                     :<></>
+                    <motion.button layout onClick={() => setRevealChoices(!revealChoices)} >{revealChoices ? "Hide" : "Reveal"} Choices </motion.button>
+                    :<></>
                 }
                
                 <motion.button layout onClick={handleClickFlip} > Flip Card </motion.button>

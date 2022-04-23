@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 
 import { motion, useAnimation } from "framer-motion";
-import { NodeNextRequest } from 'next/dist/server/base-http/node';
 
 
 const list = {
@@ -24,9 +23,6 @@ const item = {
         opacity: 1, 
     }
 }
-
-
-
 
 
 const AppHeader: React.FC = () => {
@@ -65,15 +61,21 @@ const AppHeader: React.FC = () => {
                 initial="hidden"
                 animate="visible"       
             >
-                    <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/linux-white.png" height={20} width={20} /> </motion.li> 
+                    <motion.li variants={item} whileHover={{ scale: 1.1 }} >
+                        <div className='nav-image-container'> 
+                            <Image className='nav-image' src="/linux-white.png" layout="fill"/>
+                        </div> 
+                    </motion.li> 
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} className='header-title'> Linux Essentials Study Tool </motion.li> 
                     <motion.li 
                         variants={item} 
                         whileHover={{ scale: 1.1 }}
                         onClick={ animateInfo } 
                    
-                    > <Image className='nav-image' src="/info-white.png" height={20} width={20} /> 
-                         
+                    > 
+                        <div className='nav-image-container'>
+                            <Image className='nav-image' src="/info-white.png" layout='fill'/> 
+                        </div> 
                     
                         <motion.div className='info-container' animate={animInfo}>
                             <div
@@ -87,13 +89,12 @@ const AppHeader: React.FC = () => {
                             <br></br>
                             <p> Questions and answers were primarily drawn from the <a href='https://learning.lpi.org/en/learning-materials/010-160/' target="_blank"> study resources </a> provided by the Linux Professional Institute. </p>
                             <br></br>
-                            <p> This project also includes an <a href='' target="_blank">API</a> you are welcome to use in your own projects </p>
+                            <p> This project also includes an <a href='' target="_blank">API</a> you are welcome to use in your own projects. </p>
                             <br></br>
-                            <p> Flashcards for additional modules and exams may be added in the future </p>
+                            <p> Flashcards for additional modules and exams may be added in the future. </p>
                         </motion.div> 
 
                     </motion.li>
-                    {/* <motion.li variants={item} whileHover={{ scale: 1.1 }} > <Image className='nav-image' src="/login-white.png" height={20} width={20} /> </motion.li> */}
             </motion.ul>
         </header>
     )
