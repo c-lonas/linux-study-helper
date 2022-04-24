@@ -63,7 +63,7 @@ const AppHeader: React.FC = () => {
             >
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} >
                         <div className='nav-image-container'> 
-                            <Image className='nav-image' src="/linux-white.png" layout="fill"/>
+                            <Image className='nav-image' src="/linux-white.png" alt="Linux(Home) Icon" layout="fill"/>
                         </div> 
                     </motion.li> 
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} className='header-title'> Linux Essentials Study Tool </motion.li> 
@@ -74,7 +74,7 @@ const AppHeader: React.FC = () => {
                    
                     > 
                         <div className='nav-image-container'>
-                            <Image className='nav-image' src="/info-white.png" layout='fill'/> 
+                            <Image className='nav-image' src="/info-white.png" alt="Information Icon" layout='fill'/> 
                         </div> 
                     
                         <motion.div className='info-container' animate={animInfo}>
