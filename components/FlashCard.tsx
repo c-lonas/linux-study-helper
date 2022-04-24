@@ -107,6 +107,7 @@ const FlashCard: React.FC = () => {
                                 animate="visible"
                                 custom={i}
                                 className="multiple-choice-option"
+                                key={i.toString()}
                                 >
                                     {option}
                                 </motion.li>
