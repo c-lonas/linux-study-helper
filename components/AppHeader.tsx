@@ -88,7 +88,7 @@ const AppHeader: React.FC = () => {
                             <br></br>
                             <p> Questions and answers were primarily drawn from the <a href='https://learning.lpi.org/en/learning-materials/010-160/' target="_blank" rel="noreferrer"> study resources </a> provided by the Linux Professional Institute. </p>
                             <br></br>
-                            <p> This project also includes an <a href='' target="_blank">API</a> you are welcome to use in your own projects. </p>
+                            <p> This project also includes an <a href='/api/data' target="_blank">API</a> you are welcome to use in your own projects. </p>
                             <br></br>
                             <p> Flashcards for additional modules and exams may be added in the future. </p>
                         </motion.div> 
