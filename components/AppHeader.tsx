@@ -85,9 +85,9 @@ const AppHeader: React.FC = () => {
                             >
                             </div>
 
-                            <p> This project is designed to help with studying for the <a href='https://www.lpi.org/our-certifications/linux-essentials-overview' target='_blank'> Linux Essentials Exam </a> from the Linux Professional Institute. </p>
+                            <p> This project is designed to help with studying for the <a href='https://www.lpi.org/our-certifications/linux-essentials-overview' target='_blank' rel="noreferrer"> Linux Essentials Exam </a> from the Linux Professional Institute. </p>
                             <br></br>
-                            <p> Questions and answers were primarily drawn from the <a href='https://learning.lpi.org/en/learning-materials/010-160/' target="_blank"> study resources </a> provided by the Linux Professional Institute. </p>
+                            <p> Questions and answers were primarily drawn from the <a href='https://learning.lpi.org/en/learning-materials/010-160/' target="_blank" rel="noreferrer"> study resources </a> provided by the Linux Professional Institute. </p>
                             <br></br>
                             <p> This project also includes an <a href='' target="_blank">API</a> you are welcome to use in your own projects. </p>
                             <br></br>
