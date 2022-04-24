@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 
-import FlashcardList from '../lib/FlashcardList';
+import FlashcardList from './FlashcardList';
 
 import { motion, useAnimation } from "framer-motion";
 
