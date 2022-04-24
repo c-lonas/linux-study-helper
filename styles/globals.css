@@ -252,9 +252,9 @@ span {
 
   .info-container {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 25px;
-    width: 100%;
+    width: 95%;
     height: 54vh;
     background-color: #454446;
     opacity: 0;

@@ -69,7 +69,7 @@ const AppHeader: React.FC = () => {
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} className='header-title'> Linux Essentials Study Tool </motion.li> 
                     <motion.li 
                         variants={item} 
-                        whileHover={{ scale: 1.1 }}
+                        // whileHover={{ scale: 1.1 }}
                         onClick={ animateInfo } 
                    
                     > 
