@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -364,22 +363,6 @@ export default function handler(
 
 
       // Module 1.2
-
-
-
-      {
-          id: 25,
-          question: "25",
-          answer: "25",
-          options: [
-              'A',
-              'B',
-              'C',
-          ],
-          exam: "essentials",
-          topic: 1,
-          module: 1.2
-      },
       
     ]
   )

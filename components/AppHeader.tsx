@@ -62,8 +62,10 @@ const AppHeader: React.FC = () => {
                 animate="visible"       
             >
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} >
-                        <div className='nav-image-container'> 
-                            <Image className='nav-image' src="/linux-white.png" alt="Linux(Home) Icon" layout="fill"/>
+                        <div className='nav-image-container'>
+                            <a href="https://study-linux.vercel.app"> 
+                                <Image className='nav-image' src="/linux-white.png" alt="Linux(Home) Icon" layout="fill"/>
+                            </a>
                         </div> 
                     </motion.li> 
                     <motion.li variants={item} whileHover={{ scale: 1.1 }} className='header-title'> Linux Essentials Study Tool </motion.li> 

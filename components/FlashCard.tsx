@@ -37,7 +37,6 @@ const FlashCard: React.FC = () => {
 
     const [totalCards, setTotalCards] = useState(data.length);
 
-
     // Flashcard Flip-State Handler
     const [flip , setFlip] = useState<boolean>(false);
 
