@@ -372,19 +372,19 @@ const FlashcardList: Array<flashcard_data> = [
 
 
 
-    {
-        id: 25,
-        question: "25",
-        answer: "25",
-        options: [
-            'A',
-            'B',
-            'C',
-        ],
-        exam: "essentials",
-        topic: 1,
-        module: 1.2
-    },
+    // {
+    //     id: 25,
+    //     question: "25",
+    //     answer: "25",
+    //     options: [
+    //         'A',
+    //         'B',
+    //         'C',
+    //     ],
+    //     exam: "essentials",
+    //     topic: 1,
+    //     module: 1.2
+    // },
 
 ]
 
